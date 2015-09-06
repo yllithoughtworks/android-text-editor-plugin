@@ -1,0 +1,6 @@
+rootProject.name = 'text-editor-plugin'
+
+include 'mode'
+include 'elder-mode'
+include 'young-mode'
+

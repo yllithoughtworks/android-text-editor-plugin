@@ -1,0 +1,9 @@
+dependencies {
+    compile project(':mode')
+}
+
+jar {
+    manifest {
+        instruction 'Bundle-Activator', 'com.thoughtworks.text.editor.mode.elder.Activator'
+    }
+}
