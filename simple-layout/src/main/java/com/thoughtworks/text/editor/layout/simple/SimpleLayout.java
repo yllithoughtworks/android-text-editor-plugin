@@ -26,11 +26,14 @@ public class SimpleLayout implements EditorLayout {
 
         //add modes control
         modesControl = new ModesControl();
+        modesControl.getViewGroup().setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         viewGroup.addView(modesControl.getViewGroup());
 
         //add workspace
         workspace = new SimpleWorkspace();
-        viewGroup.addView(workspace.getViewGroup());
+        final ViewGroup workspaceViewGroup = workspace.getViewGroup();
+        workspaceViewGroup.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1));
+        viewGroup.addView(workspaceViewGroup);
     }
 
     @Override
@@ -56,7 +59,6 @@ public class SimpleLayout implements EditorLayout {
             viewGroup = new LinearLayout(context);
             viewGroup.setOrientation(LinearLayout.HORIZONTAL);
             viewGroup.setGravity(Gravity.CENTER);
-            viewGroup.setBackgroundColor(Color.parseColor("#ff8d8d8d"));
         }
 
         public ViewGroup getViewGroup() {
@@ -89,11 +91,11 @@ public class SimpleLayout implements EditorLayout {
 
         public SimpleWorkspace() {
             viewGroup = new LinearLayout(context);
-            viewGroup.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT));
+            viewGroup.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             viewGroup.setOrientation(LinearLayout.VERTICAL);
 
             editor = new TextView(context);
-            editor.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.FILL_PARENT, 1));
+            editor.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1));
 
             viewGroup.addView(editor);
         }

@@ -24,8 +24,6 @@ public class ElderMode implements Mode {
         content.setTextSize(30);
 
         controlBar = new LinearLayout(context);
-        controlBar.setBackgroundColor(Color.parseColor("#ff8d8d8d"));
-
 
         Button zoomOut = new Button(context);
         zoomOut.setText("-");

@@ -22,8 +22,6 @@ public class YoungMode implements Mode {
         final TextView content = workspace.getEditor();
 
         controlBar = new LinearLayout(context);
-        controlBar.setBackgroundColor(Color.parseColor("#ff8d8d8d"));
-
 
         Button blue = new Button(context);
         blue.setText("蓝");
