@@ -1,0 +1,9 @@
+dependencies {
+    compile project(':layout')
+}
+
+jar {
+    manifest {
+        instruction 'Bundle-Activator', 'com.thoughtworks.text.editor.layout.simple.Activator'
+    }
+}
