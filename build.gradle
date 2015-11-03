@@ -11,7 +11,7 @@ subprojects {
     }
 
     dependencies {
-        compile 'org.osgi:org.osgi.core:5.0.0'
+ //     compile 'org.osgi:org.osgi.core:5.0.0'
         compile "org.apache.felix:org.apache.felix.main:5.0.0"
         compile 'com.google.android:android:4.1.1.4'
     }
